@@ -1,5 +1,5 @@
-@primary-color: #06083f; 
-@secondary-color: #089bdf;  
+@primary-color: #e01c42; 
+@secondary-color: #3d86c6;  
 @third-color: #555555;  
 /*
 FUNÇÕES PADRÕES START
@@ -23,22 +23,12 @@ FUNÇÕES PADRÕES START
 /*********************************************************************
 FUNÇÕES PADRÕES END
 */
-/*
-NON-RESPONSIVE START
-**********************************************************************************************/
-/* ALTERAR APENAS ESTAS VARIAVEIS DE ACORDO COM O PROJETO START */
-.container {max-width: none !important;width: 960px;}
-.navbar-nav > li > a {padding-top: 3.5px;padding-bottom:3.5px;}
-/* ALTERAR APENAS ESTAS VARIAVEIS DE ACORDO COM O PROJETO END */
-/* Finesse the page header spacing */.page-header {margin-bottom: 30px;}.page-header .lead {margin-bottom: 10px;}/* Non-responsive overrides** Utilitze the following CSS to disable the responsive-ness of the container,* grid system, and navbar.*//* Reset the container *//* Always float the navbar header */.navbar-header {float: left;}/* Undo the collapsing navbar */.navbar-collapse {display: block !important;height: auto !important;padding-bottom: 0;overflow: visible !important;}.navbar-toggle {display: none;}.navbar-collapse {border-top: 0;}.navbar-brand {margin-left: -15px;}/* Always apply the floated nav */.navbar-nav {float: left;margin: 0;}.navbar-nav > li {float: left;}/* Redeclare since we override the float above */.navbar-nav.navbar-right {float: right;}/* Undo custom dropdowns */.navbar .navbar-nav .open .dropdown-menu {position: absolute;float: left;background-color: #fff;border: 1px solid #cccccc;border: 1px solid rgba(0, 0, 0, 0.15);border-width: 0 1px 1px;border-radius: 0 0 4px 4px;-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);}.navbar-default .navbar-nav .open .dropdown-menu > li > a {color: #333;}.navbar .navbar-nav .open .dropdown-menu > li > a:hover,.navbar .navbar-nav .open .dropdown-menu > li > a:focus,.navbar .navbar-nav .open .dropdown-menu > .active > a,.navbar .navbar-nav .open .dropdown-menu > .active > a:hover,.navbar .navbar-nav .open .dropdown-menu > .active > a:focus {color: #fff !important;background-color: #428bca !important;}.navbar .navbar-nav .open .dropdown-menu > .disabled > a,.navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover,.navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus {color: #999 !important;background-color: transparent !important;}
-/**********************************************************************************************
-NON-RESPONSIVE END
-*/
 ::selection {background-color: @primary-color;color: #FFF;}
 ::-moz-selection {background-color: @primary-color;color: #FFF;}
 small {display: inline-block;line-height: 1.1;}
 textarea {resize:vertical;}
 a {transition: all 0.25s ease 0s;}
+img {max-width: 100%;height: auto;}
 /*
 FONTS START
 **********************************************************************************************/
@@ -50,8 +40,22 @@ FONTS END
 /*
 ESTRUTURA START
 **********************************************************************************************/
-
-
+body {overflow: hidden;}
+.page {
+    position: relative;
+    &, a {color: #FFF;}
+}
+.page-mentira {
+    background-color: @primary-color;z-index: 2;
+}
+.page-verdade {
+    background-color: @secondary-color;z-index: 1;
+    .container {padding-top:100px;}
+}
+.navegacao {
+    position: absolute;bottom: 30px;left: 0;right: 0;
+    .arrow-down {position: absolute;bottom: -94px;left: 50%;margin-left:-69px;}
+}
 /**********************************************************************************************
 ESTRUTURA END
 */
@@ -59,6 +63,7 @@ ESTRUTURA END
 CLASSES START
 **********************************************************************************************/
 [class^='lista-'], [class^='lista-'], [class^='menu-'], [class^='menu-'] ul, .cycle-slideshow {list-style:none;margin-bottom:0;padding-left:0;}
+.btn {white-space: normal;}
 .btn-gray {background: #EEE;color:#C93F2A;}
 .btn-circle-lg-white {
     width: 122px;height: 122px;text-align: center;-webkit-border-radius: 150px;-moz-border-radius: 150px;-ms-border-radius: 150px;-o-border-radius: 150px;border-radius: 150px;display: inline-block;background: #FFF;color: @primary-color !important;font-size: 14px;text-transform: uppercase;
@@ -96,6 +101,8 @@ JQUERY UI END
 }
 @media (max-width: 480px) {
  /*#GERAL:before {content:"MOBILE";}*/
+    .img-lg {max-width: 80%;}
+
 }
 @media (min-width: 768px) and (max-width: 980px) {
 

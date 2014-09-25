@@ -4,8 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Mobile</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=960, user-scalable=yes">
-	<link rel="shortcut icon" href="/imagem/favicon.png" type="image/png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<meta name="author" content="Libra Design" />
 	<meta name="keywords" content="" />
 	<meta property="og:description" content="" />
@@ -16,20 +15,13 @@
 	<meta property="og:site_name" content="" />
 	<meta property="og:type" content="website" />
 	<link rel="stylesheet" href="/library/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/fonts/stylesheet.css">
-	<link rel="stylesheet" href="/imagem/site/icon.css">
 	<link rel="stylesheet" href="/css/site.css">
 	<script type="text/javascript" src="/library/jquery-1.9.1.min.js"></script>
-	<script type="text/javascript" src="/library/bootstrap/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="/library/easing/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="/library/cycle2/jquery.cycle2.min.js"></script>
-	<script type="text/javascript" src="/library/cycle2/jquery.cycle2.swipe.min.js"></script>
-	<script type="text/javascript" src="/library/cycle2/jquery.cycle2.scrollVert.min.js"></script>
-	<script type="text/javascript" src="/library/cycle2/jquery.cycle2.carousel.min.js"></script>
+	<script type="text/javascript" src="/library/local-scroll/jquery.scrollTo-1.4.3.1-min.js"></script>
+	<script type="text/javascript" src="/library/local-scroll/jquery.localscroll-1.2.7-min.js"></script>
 	<script type="text/javascript" src="/js/bootstrap_site.js"></script>
 </head>
 <body>
-	<a href="#content" class="sr-only">Ir para o conteúdo</a>
 	<div class="extra-geral">
 		<div class="site-geral">
 			<header class="extra-header">
@@ -41,9 +33,49 @@
 			</header> <!-- .extra-header -->
 			<div class="extra-central">
 				<div class="site-central">
-					<div class="container">
-						
-					</div> <!-- .container -->
+					<div class="pages text-center">
+						<div class="page page-mentira" id="page-1">
+							<div class="container">
+								<p><img src="/imagem/site/arvore.jpg" alt="arvore" class="img-lg"></p>
+								<p>
+									Em Serra Pelada, uma vila perto de Serra Leste, há uma grande árvore. Há anos as pessoas se encontram lá para colocar o papo em dia.
+								</p>
+								<p>
+									Hoje a árvore ainda existe e é ponto de referência. Faça uma pergunta a um morador e ele lhe dirá: fica ali perto do ...
+								</p>
+								<p class="h1 pula">
+									<a href="#page-2">Pau da Mentira</a>
+								</p>
+								<div class="navegacao">
+									<a href="#page-2"><img src="/imagem/site/arrow-down.jpg" alt="" class="arrow-down"></a>
+								</div> <!-- .navegacao -->
+							</div> <!-- .container -->
+						</div> <!-- .page -->
+						<div class="page page-verdade" id="page-2">
+							<div class="container">
+								<h2>
+									<span class="inline-block">Pau da Mentira</span>
+									X
+									<span class="inline-block">Pau da Verdade</span>
+								</h2>
+								<p>
+									Sem que haja maldade, as vezes um desencontro de informação entre duas pessoas se torna um boato.
+								</p>
+								<p>
+									<strong>Para a Vale, uma cominucação transparente é fundamental.</strong>
+								</p>
+								<p class="pula">
+									<a href="#page-3" class="btn btn-danger btn-lg">Clique e conheça os dois lados da história</a>
+								</p>
+								<p>
+									<a href="#">Compartilhar com amigos</a>
+								</p>
+								<div class="navegacao">
+									<a href="#page-1" class="btn btn-primary btn-lg">Mentira</a>
+								</div> <!-- .navegacao -->
+							</div> <!-- .container -->
+						</div> <!-- .page -->
+					</div> <!-- .pages -->
 				</div> <!-- .site-central -->
 			</div> <!-- .extra-central -->
 			<footer>
